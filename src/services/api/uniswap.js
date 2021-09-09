@@ -48,7 +48,7 @@ export const fetchPairInfo = ({ address }, networkId) => {
   switch (networkId) {
     case networkIds.MAINNET:
       return fetchPairInfoUniswap({ address })
-    case networkIds.FUSE:
+    case networkIds.BSC_TESTNET:
       return fetchPairInfoFuseswap({ address })
     case networkIds.BSC:
       return fetchPairInfoPancakeswap({ address })
