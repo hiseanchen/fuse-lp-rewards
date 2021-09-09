@@ -10,35 +10,35 @@ const networks = {
     rpc: 'https://bsc-dataseed.binance.org',
     explorer: 'https://bscscan.com'
   },
-  122: {
-    chainId: '0x7a',
-    chainName: 'Fuse Network',
+  97: {
+    chainId: '0x61',
+    chainName: 'BSC testnet',
     nativeCurrency: {
-      name: 'Fuse',
-      symbol: 'FUSE',
+      name: 'Binance',
+      symbol: 'BNB',
       decimals: 18
     },
-    rpc: 'https://rpc.fuse.io',
-    explorer: 'https://explorer.fuse.io'
+    rpc: 'https://data-seed-prebsc-1-s1.binance.org:8545',
+    explorer: 'https://testnet.bscscan.com'
   }
 }
 
 const blockExplorers = {
   1: 'https://etherscan.io',
   56: 'https://bscscan.com',
-  122: 'https://explorer.fuse.io'
+  97: 'https://testnet.bscscan.com'
 }
 
 const networkNames = {
   1: 'Mainnet',
   56: 'Binance Smart Chain',
-  122: 'Fuse'
+  97: 'BSC testnet'
 }
 
 export const networkIds = {
   MAINNET: 1,
   BSC: 56,
-  FUSE: 122
+  BSC_TESTNET: 97
 }
 
 export const getBlockExplorerUrl = (networkId) => blockExplorers[networkId]
