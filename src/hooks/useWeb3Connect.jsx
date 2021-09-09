@@ -12,7 +12,7 @@ const providerOptions = {
       rpc: {
         1: 'https://mainnet.infura.io/v3/a7f50ee1a9e94ea3af446d76106ff515',
         56: 'https://bsc-dataseed.binance.org/',
-        122: 'https://rpc.fuse.io'
+        97: 'https://data-seed-prebsc-1-s1.binance.org:8545'
       }
     }
   }
