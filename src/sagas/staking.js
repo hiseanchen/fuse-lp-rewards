@@ -10,7 +10,7 @@ import { ADDRESS_ZERO } from '@/constants'
 import { getContractRewardType, getReward, getRewards } from '../utils'
 
 function * getStakingContractsData () {
-  const object = { ...CONFIG.contracts.main, ...CONFIG.contracts.fuse, ...CONFIG.contracts.bsc }
+  const object = { ...CONFIG.contracts.main, ...CONFIG.contracts.bsc_testnet, ...CONFIG.contracts.bsc }
   for (const stakingContract in object) {
     const { LPToken, networkId } = object[stakingContract]
     yield put(actions.getTokenAllowance(stakingContract, LPToken, networkId))
@@ -190,7 +190,7 @@ function * getStakingPeriod ({ stakingContract, networkId }) {
   const rewardType = getContractRewardType(stakingContract)
   const RewardProgram = getReward(rewardType)
   const staking = new RewardProgram(stakingContract, web3)
-  const rewardToken = rewardType === 'multi' && CONFIG.rewardTokens[networkId] 
+  const rewardToken = rewardType === 'multi' && CONFIG.rewardTokens[networkId]
   const { start, duration, end } = yield staking.getStakingTimes(rewardToken)
 
   const isExpired = moment().isAfter(moment.unix(end))
