@@ -58,7 +58,7 @@ export const REWARDS_PLATFORMS_LIST = [{
     },
     {
         name: REWARDS_PLATFORMS.FUSESWAP,
-        label: "FuseSwap On Fuse",
+        label: "HiDollar On HI",
         banner: fuseSwapBanner,
         icon: fuseIcon,
     },
