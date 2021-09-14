@@ -1,107 +1,6 @@
 {
   "contracts": {
     "main": {
-      "0xB06Eb970a623AbEd8630bbb6B11a6071A352A554": {
-        "networkId": 1,
-        "pairName": "ETH/FUSE",
-        "LPToken": "0x4ce3687fed17e19324f23e305593ab13bbd55c4d",
-        "contractAddress": "0xB06Eb970a623AbEd8630bbb6B11a6071A352A554",
-        "pairs": [
-          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "type": "single"
-      },
-      "0x928EE7ffF283abD3D8C365F39Cd08F346bd31A76": {
-        "networkId": 1,
-        "pairName": "ETH/FUSE",
-        "LPToken": "0x4ce3687fed17e19324f23e305593ab13bbd55c4d",
-        "contractAddress": "0x928EE7ffF283abD3D8C365F39Cd08F346bd31A76",
-        "pairs": [
-          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "type": "single"
-      },
-      "0xc2077bDdEeB34D3a1372A147d6Db93Ccc9686854": {
-        "networkId": 1,
-        "pairName": "ETH/FUSE",
-        "LPToken": "0x4ce3687fed17e19324f23e305593ab13bbd55c4d",
-        "contractAddress": "0xc2077bDdEeB34D3a1372A147d6Db93Ccc9686854",
-        "isHot": true,
-        "pairs": [
-          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "totalReward": 100000,
-        "type": "single"
-      },
-      "0x9640B393a016ba171a15BB2E68A8B3327Ef7ee29": {
-        "networkId": 1,
-        "pairName": "ETH/FUSE",
-        "LPToken": "0x4ce3687fed17e19324f23e305593ab13bbd55c4d",
-        "contractAddress": "0x9640B393a016ba171a15BB2E68A8B3327Ef7ee29",
-        "pairs": [
-          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "totalReward": 300000,
-        "type": "single"
-      },
-      "0xCBdCc62feF478D0e94112AD5123c33edAe6D820f": {
-        "networkId": 1,
-        "pairName": "ETH/FUSE",
-        "LPToken": "0x4ce3687fed17e19324f23e305593ab13bbd55c4d",
-        "contractAddress": "0xCBdCc62feF478D0e94112AD5123c33edAe6D820f",
-        "pairs": [
-          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "totalReward": 500000,
-        "type": "single"
-      },
-      "0xd9D5Fda4D82693eEAa4289A83914DdC6C072cb8B": {
-        "networkId": 1,
-        "pairName": "USDC/FUSE",
-        "LPToken": "0x611805Ce4071C096f5b44557b45685802d8a46FE",
-        "contractAddress": "0xd9D5Fda4D82693eEAa4289A83914DdC6C072cb8B",
-        "pairs": [
-          "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "totalReward": 500000,
-        "type": "single"
-      },
-      "0xb54536E0c4CA3FA54d394DB6B7c41f70AeC334FF": {
-        "networkId": 1,
-        "pairName": "ETH/FUSE",
-        "LPToken": "0x4ce3687fed17e19324f23e305593ab13bbd55c4d",
-        "contractAddress": "0xb54536E0c4CA3FA54d394DB6B7c41f70AeC334FF",
-        "pairs": [
-          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "rewards": [
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "totalReward": 150000,
-        "type": "multi"
-      },
-      "0xA4c9BEc5dbd6f3497301b01D62B9AA40c3E214F6": {
-        "networkId": 1,
-        "pairName": "USDC/FUSE",
-        "LPToken": "0x611805Ce4071C096f5b44557b45685802d8a46FE",
-        "contractAddress": "0xA4c9BEc5dbd6f3497301b01D62B9AA40c3E214F6",
-        "pairs": [
-          "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "rewards": [
-          "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d"
-        ],
-        "totalReward": 100000,
-        "type": "multi"
-      }
     },
     "bsc_testnet": {
       "0xBB5deF991706AB3597125F7Bae60118C16688c98": {
@@ -116,59 +15,11 @@
         "rewards": [
           "0x945399C59134BCEf824C6B6f59a2ae29774b17B5"
         ],
-        "totalReward": 1500,
+        "totalReward": 10000,
         "type": "multi"
       }
     },
     "bsc": {
-      "0xEEBa1e9334b55958664108b13F016A18994eB818": {
-        "networkId": 56,
-        "pairName": "FUSE/BNB",
-        "contractAddress": "0xEEBa1e9334b55958664108b13F016A18994eB818",
-        "LPToken": "0x6483f166b9e4310a165a55fea04f867499aded06",
-        "pairs": [
-          "0x5857c96DaE9cF8511B08Cb07f85753C472D36Ea3",
-          "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
-        ],
-        "totalReward": 55000,
-        "type": "single"
-      },
-      "0x4d2Cd192d2ea321707bb52b266DBeaB95FB94d47": {
-        "networkId": 56,
-        "pairName": "FUSE/BNB",
-        "contractAddress": "0x4d2Cd192d2ea321707bb52b266DBeaB95FB94d47",
-        "LPToken": "0x6483f166b9e4310a165a55fea04f867499aded06",
-        "pairs": [
-          "0x5857c96DaE9cF8511B08Cb07f85753C472D36Ea3",
-          "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
-        ],
-        "totalReward": 50000,
-        "type": "single"
-      },
-      "0x34f37aa7ec34752b7e46fbfdb9d0db802202b59e": {
-        "networkId": 56,
-        "pairName": "ETH/FUSE",
-        "contractAddress": "0x34f37aa7ec34752b7e46fbfdb9d0db802202b59e",
-        "LPToken": "0x26963a1ADf4738a11c8e2192ffE1ff51aaCd942c",
-        "pairs": [
-          "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
-          "0x5857c96DaE9cF8511B08Cb07f85753C472D36Ea3"
-        ],
-        "totalReward": 50000,
-        "type": "single"
-      },
-      "0x50a7be05872466031611013da54c9cc5e1166319": {
-        "networkId": 56,
-        "pairName": "USDC/FUSE",
-        "contractAddress": "0x50a7be05872466031611013da54c9cc5e1166319",
-        "LPToken": "0x14143271537db4bb6926d0e68490c532dbeb075f",
-        "pairs": [
-          "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
-          "0x5857c96DaE9cF8511B08Cb07f85753C472D36Ea3"
-        ],
-        "totalReward": 50000,
-        "type": "single"
-      },
       "0x4f18D7FA5996337ba787f82C4D4758A6e655D6B3": {
         "networkId": 56,
         "pairName": "FUSE/BNB",
