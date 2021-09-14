@@ -113,8 +113,11 @@
           "0x945399C59134BCEf824C6B6f59a2ae29774b17B5",
           "0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7"
         ],
-        "totalReward": 99,
-        "type": "single"
+        "rewards": [
+          "0x945399C59134BCEf824C6B6f59a2ae29774b17B5"
+        ],
+        "totalReward": 1500,
+        "type": "multi"
       }
     },
     "bsc": {
