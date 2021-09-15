@@ -1,79 +1,59 @@
 {
-  "contracts": {
-    "main": {
+    "contracts": {
+        "main": {},
+        "bsc": {
+            "0x4f18D7FA5996337ba787f82C4D4758A6e655D6B3": {
+                "networkId": 56,
+                "pairName": "FUSE/BNB",
+                "contractAddress": "0x4f18D7FA5996337ba787f82C4D4758A6e655D6B3",
+                "LPToken": "0x6483F166b9E4310A165a55FEa04F867499aded06",
+                "pairs": [
+                    "0x5857c96DaE9cF8511B08Cb07f85753C472D36Ea3",
+                    "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
+                ],
+                "rewards": [
+                    "0x5857c96dae9cf8511b08cb07f85753c472d36ea3"
+                ],
+                "totalReward": 150000,
+                "type": "multi"
+            }
+        }
     },
-    "bsc_testnet": {
-      "0xBB5deF991706AB3597125F7Bae60118C16688c98": {
-        "networkId": 97,
-        "pairName": "HI/BUSD",
-        "LPToken": "0xafe117f963ba1d3362610676f5003e57de237a14",
-        "contractAddress": "0xBB5deF991706AB3597125F7Bae60118C16688c98",
-        "pairs": [
-          "0x945399C59134BCEf824C6B6f59a2ae29774b17B5",
-          "0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7"
-        ],
-        "rewards": [
-          "0x945399C59134BCEf824C6B6f59a2ae29774b17B5"
-        ],
-        "totalReward": 10000,
-        "type": "multi"
-      }
+    "rewardTokens": {
+        "1": "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d",
+        "56": "0x5857c96dae9cf8511b08cb07f85753c472d36ea3"
     },
-    "bsc": {
-      "0x4f18D7FA5996337ba787f82C4D4758A6e655D6B3": {
-        "networkId": 56,
-        "pairName": "FUSE/BNB",
-        "contractAddress": "0x4f18D7FA5996337ba787f82C4D4758A6e655D6B3",
-        "LPToken": "0x6483F166b9E4310A165a55FEa04F867499aded06",
-        "pairs": [
-          "0x5857c96DaE9cF8511B08Cb07f85753C472D36Ea3",
-          "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
-        ],
-        "rewards": [
-          "0x5857c96dae9cf8511b08cb07f85753c472d36ea3"
-        ],
-        "totalReward": 150000,
-        "type": "multi"
-      }
-    }
-  },
-  "rewardTokens": {
-    "1": "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d",
-    "56": "0x5857c96dae9cf8511b08cb07f85753c472d36ea3",
-    "97": "0x945399C59134BCEf824C6B6f59a2ae29774b17B5"
-  },
-  "web3": {
-    "bscTestnetProvider": "https://data-seed-prebsc-1-s1.binance.org:8545",
-    "ethereumProvider": "https://eth-mainnet.gateway.pokt.network/v1/5f7cca33b90218002e9ce9be",
-    "bscProvider": "https://bscnode.liquify.info"
-  },
-  "api": {
-    "graph": {
-      "uniswap": {
-        "url": "https://api.thegraph.com/subgraphs/name/uniswap",
-        "subgraphs": {
-          "v2": "/uniswap-v2"
+    "web3": {
+        "ethereumProvider": "https://eth-mainnet.gateway.pokt.network/v1/5f7cca33b90218002e9ce9be",
+        "bscProvider": "https://bscnode.liquify.info"
+    },
+    "api": {
+        "graph": {
+            "uniswap": {
+                "url": "https://api.thegraph.com/subgraphs/name/uniswap",
+                "subgraphs": {
+                    "v2": "/uniswap-v2"
+                }
+            },
+            "fuseswap": {
+                "url": "https://graph.fuse.io/subgraphs/name/fuseio",
+                "subgraphs": {
+                    "fuseswap": "/fuseswap"
+                }
+            },
+            "pancakeswap": {
+                "url": "https://api.thegraph.com/subgraphs/name/pancakeswap/exchange",
+                "subgraphs": {
+                    "exchange": "/exchange"
+                }
+            }
         }
-      },
-      "fuseswap": {
-        "url": "https://graph.fuse.io/subgraphs/name/fuseio",
-        "subgraphs": {
-          "fuseswap": "/fuseswap"
+    },
+    "reactGA": {
+        "trackingId": "G-BG51CQDGZE",
+        "gaOptions": {
+            "testMode": true,
+            "debug": true
         }
-      },
-      "pancakeswap": {
-        "url": "https://api.thegraph.com/subgraphs/name/pancakeswap/exchange",
-        "subgraphs": {
-          "exchange": "/exchange"
-        }
-      }
     }
-  },
-  "reactGA": {
-    "trackingId": "G-BG51CQDGZE",
-    "gaOptions": {
-      "testMode": true,
-      "debug": true
-    }
-  }
 }

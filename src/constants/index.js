@@ -51,18 +51,6 @@ export const REWARDS_PLATFORMS = {
 };
 
 export const REWARDS_PLATFORMS_LIST = [{
-        name: REWARDS_PLATFORMS.UNISWAP,
-        label: "Uniswap On Ethereum",
-        banner: uniswapBanner,
-        icon: ethIcon,
-    },
-    {
-        name: REWARDS_PLATFORMS.FUSESWAP,
-        label: "HiDollar On HI",
-        banner: fuseSwapBanner,
-        icon: fuseIcon,
-    },
-    {
         name: REWARDS_PLATFORMS.PANCAKESWAP,
         label: "PancakeSwap On BSC ",
         banner: pancakeSwapBanner,
@@ -77,24 +65,11 @@ export const REWARDS_PLATFORMS_LIST = [{
 ];
 
 export const STAKING_CONTRACTS = [{
-        icon: ethIcon,
-        network: "Ethereum",
-        platform: REWARDS_PLATFORMS.UNISWAP,
-        items: CONFIG.contracts.main,
-    },
-    {
-        icon: fuseIcon,
-        network: "Fuse",
-        platform: REWARDS_PLATFORMS.FUSESWAP,
-        items: CONFIG.contracts.bsc_testnet,
-    },
-    {
-        icon: bscIcon,
-        network: "Bsc",
-        platform: REWARDS_PLATFORMS.PANCAKESWAP,
-        items: CONFIG.contracts.bsc,
-    },
-];
+    icon: bscIcon,
+    network: "Bsc",
+    platform: REWARDS_PLATFORMS.PANCAKESWAP,
+    items: CONFIG.contracts.bsc,
+}, ];
 
 export const ADDRESS_ZERO = "0x0000000000000000000000000000000000000000";
 

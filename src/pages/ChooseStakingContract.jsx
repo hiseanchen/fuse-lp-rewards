@@ -65,7 +65,7 @@ export default () => {
         </div>
         {
           !isEmpty(contracts) ? contracts.map(({ icon, network, items }, index) => (
-            <div className='rewards__cards-container grid-x align-middle'>
+            <div className='rewards__cards-container grid-x align-middle' key={index}>
               {
                 reverse(map(items, (contract) => {
                   const { contractAddress } = contract

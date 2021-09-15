@@ -52,7 +52,7 @@ const Footer = () => {
             )}
           />
           <HoverIcon
-            link='https://github.com/fuseio'
+            link='https://github.com/HiChainGlobal/fuse-lp-rewards'
             Icon={() => (
               <div className='image' style={{ backgroundImage: `url(${githubIcon})` }} />
             )}

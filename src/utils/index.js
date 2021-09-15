@@ -9,10 +9,10 @@ const getPairPath = (pairs) => {
 
 const getPlatformBaseUrl = (networkId) => {
     switch (networkId) {
-        case networkIds.MAINNET:
-            return 'https://app.uniswap.org'
-        case networkIds.BSC_TESTNET:
-            return 'https://pancake.kiemtienonline360.com'
+        // case networkIds.MAINNET:
+        //     return 'https://app.uniswap.org'
+        // case networkIds.BSC_TESTNET:
+        //     return 'https://pancake.kiemtienonline360.com'
         case networkIds.BSC:
             return 'https://exchange.pancakeswap.finance'
     }
@@ -24,17 +24,17 @@ export const getAddLiquidityLink = (pairs, networkId) => {
 
 export const getPlatformName = (networkId) => {
     switch (networkId) {
-        case networkIds.MAINNET:
-            return REWARDS_PLATFORMS.UNISWAP
-        case networkIds.BSC_TESTNET:
-            return REWARDS_PLATFORMS.PANCAKESWAP // TODO: may be change to PANCAKESWAP_TESTNET
+        // case networkIds.MAINNET:
+        //     return REWARDS_PLATFORMS.UNISWAP
+        // case networkIds.BSC_TESTNET:
+        //     return REWARDS_PLATFORMS.PANCAKESWAP // TODO: may be change to PANCAKESWAP_TESTNET
         case networkIds.BSC:
             return REWARDS_PLATFORMS.PANCAKESWAP
     }
 }
 
 export const getRewardTokenName = (networkId) => {
-    return networkId === networkIds.MAINNET || networkId === networkIds.BSC || networkId === networkIds.BSC_TESTNET ?
+    return networkId === networkIds.BSC ?
         'HI' :
         'WFUSE'
 }
@@ -52,9 +52,7 @@ export const getPlatformPairName = (networkId) => {
 
 const getHelpLinkFromNetworkId = (networkId) => {
     switch (networkId) {
-        case networkIds.MAINNET:
-        case networkIds.BSC_TESTNET: // TODO: need a help link for bsc testnet pancake
-            return 'https://medium.com/fusenet/how-to-stake-eth-fuse-lp-tokens-for-fuse-rewards-fd9abe08f84c'
+
         case networkIds.BSC:
             return 'https://docs.fuse.io/tutorials/adding-liquidity-on-pcs'
     }
@@ -88,11 +86,11 @@ export const getReward = (rewardType) => {
 }
 
 export const getContractRewardType = (address) => {
-    const contracts = {...CONFIG.contracts.main, ...CONFIG.contracts.bsc_testnet, ...CONFIG.contracts.bsc }
+    const contracts = {...CONFIG.contracts.bsc }
     return contracts[address].type
 }
 
 export const getRewards = (address) => {
-    const contracts = {...CONFIG.contracts.main, ...CONFIG.contracts.bsc_testnet, ...CONFIG.contracts.bsc }
+    const contracts = {...CONFIG.contracts.bsc }
     return contracts[address].rewards
 }

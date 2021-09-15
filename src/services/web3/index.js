@@ -16,12 +16,10 @@ export const getWeb3 = ({ provider, networkType } = {}) => {
     if (givenWeb3) return givenWeb3
 }
 
-export const bsc_testnet = new Web3(CONFIG.web3.bscTestnetProvider)
 export const main = new Web3(CONFIG.web3.ethereumProvider)
 export const bsc = new Web3(CONFIG.web3.bscProvider)
 
 const web3ByNetworkType = {
-    97: bsc_testnet,
     56: bsc,
     1: main
 }
