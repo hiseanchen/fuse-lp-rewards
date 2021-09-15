@@ -134,12 +134,8 @@ function* getStatsData({ stakingContract, tokenAddress, networkId }) {
     const rewardType = getContractRewardType(stakingContract)
     const RewardProgram = getReward(rewardType)
     const staking = new RewardProgram(stakingContract, web3)
-    console.log('staking---', staking);
     const rewards = rewardType === 'single' ? [CONFIG.rewardTokens[networkId]] : getRewards(stakingContract)
-    console.log('rewardType        ', rewardType);
-    console.log('accountAddress, tokenAddress, networkId, rewards---     ', accountAddress, tokenAddress, networkId, rewards);
     const stats = yield staking.getStats(accountAddress, tokenAddress, networkId, rewards)
-    console.log('stats----', stats);
     yield put({
         type: actions.GET_STATS_DATA.SUCCESS,
         accountAddress,
