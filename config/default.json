@@ -2,30 +2,30 @@
     "contracts": {
         "main": {},
         "bsc": {
-            "0x4f18D7FA5996337ba787f82C4D4758A6e655D6B3": {
+            "0x21d292e0c9915a7f56504c524923185ef4705357": {
                 "networkId": 56,
-                "pairName": "FUSE/BNB",
-                "contractAddress": "0x4f18D7FA5996337ba787f82C4D4758A6e655D6B3",
-                "LPToken": "0x6483F166b9E4310A165a55FEa04F867499aded06",
+                "pairName": "HI/BUSD",
+                "contractAddress": "0x21d292e0c9915a7f56504c524923185ef4705357",
+                "LPToken": "0xe87d73436cdf6b5815e7a7a6ad4b582e32751ba9",
                 "pairs": [
-                    "0x5857c96DaE9cF8511B08Cb07f85753C472D36Ea3",
-                    "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
+                    "0x49EFc549313Fd658c532Dda23C2b046Fe3329650",
+                    "0xe9e7cea3dedca5984780bafc599bd69add087d56"
                 ],
                 "rewards": [
-                    "0x5857c96dae9cf8511b08cb07f85753c472d36ea3"
+                    "0x49EFc549313Fd658c532Dda23C2b046Fe3329650"
                 ],
-                "totalReward": 150000,
+                "totalReward": 10,
                 "type": "multi"
             }
         }
     },
     "rewardTokens": {
-        "1": "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d",
-        "56": "0x5857c96dae9cf8511b08cb07f85753c472d36ea3"
+        "56": "0x49EFc549313Fd658c532Dda23C2b046Fe3329650"
     },
     "web3": {
         "ethereumProvider": "https://eth-mainnet.gateway.pokt.network/v1/5f7cca33b90218002e9ce9be",
-        "bscProvider": "https://bscnode.liquify.info"
+        "bscProvider": "https://bsc-dataseed.binance.org"
+        // "bscProvider": "https://bscnode.liquify.info"
     },
     "api": {
         "graph": {
