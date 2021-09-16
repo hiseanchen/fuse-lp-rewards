@@ -43,22 +43,6 @@ const Stats = () => {
         />
       </div>
       <div className='medium-12 small-24 cell'>
-        <GrayContainer
-          tootlipText='Locked Rewards are the $FUSE yet to be rewarded.'
-          title='Locked Rewards'
-          symbol={getRewardTokenName(networkId)}
-          end={formatWeiToNumber(lockedRewards)}
-        />
-      </div>
-      <div className='medium-12 small-24 cell'>
-        <GrayContainer
-          tootlipText='Unlocked Rewards are the $FUSE rewarded to LP token depositors.'
-          title='Unlocked Rewards'
-          symbol={getRewardTokenName(networkId)}
-          end={formatWeiToNumber(unlockedReward)}
-        />
-      </div>
-      <div className='medium-12 small-24 cell'>
         <div className='gray_container'>
           <div className='grid-x align-justify align-middle'>
             <div className='title'>Program Duration</div>
