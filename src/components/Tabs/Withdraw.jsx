@@ -50,7 +50,6 @@ const WithdrawForm = ({ handleConnect }) => {
       label: `${submitType} ${amount} from staking contract: ${stakingContract} `
     })
   }
-
   const renderForm = ({ values, setFieldValue, dirty, isValid }) => {
     const { amount } = values
     return (
@@ -67,8 +66,9 @@ const WithdrawForm = ({ handleConnect }) => {
         <PercentageSelector balance={totalStaked} />
         <div className='gray_container__wrapper'>
           <GrayContainer
+            decimals={2}
             symbol={getRewardTokenName(networkId)}
-            tootlipText='Rewarded FUSEs available for claim.'
+            tootlipText='Rewarded Hi available for claim.'
             title='Rewards to withdraw'
             end={isNaN(formatWeiToNumber(accruedRewards)) ? 0 : formatWeiToNumber(accruedRewards)}
             showWithdrawBtn={isStakingNetwork && formatWeiToNumber(accruedRewards) > 0}
@@ -77,8 +77,9 @@ const WithdrawForm = ({ handleConnect }) => {
             }}
           />
           <GrayContainer
+            decimals={2}
             symbol={getRewardTokenName(networkId)}
-            tootlipText='Rewarded FUSEs already claimed.'
+            tootlipText='Rewarded Hi already claimed.'
             title='rewards claimed'
             end={isNaN(formatWeiToNumber(withdrawnToDate))
               ? 0

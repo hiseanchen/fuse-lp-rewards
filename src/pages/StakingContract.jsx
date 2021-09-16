@@ -62,6 +62,7 @@ export default ({ handleConnect }) => {
           <h1 className='title'>Add liquidity</h1>
           <div className='boxs'>
             <InfoBox
+              decimals={2}
               name='apy'
               modalText='APY - Annual Percentage Yield (APY) is the estimated yearly yield for tokens locked. Our calculation is " $ locked * (1 year in second)/(total stake in $ * time remaining in seconds).'
               withSymbol={false}
@@ -84,6 +85,7 @@ export default ({ handleConnect }) => {
               format={false}
             />
             <InfoBox
+               decimals={2}
               link={`${getBlockExplorerUrl(networkId)}/address/${CONFIG.rewardTokens[networkId]}`}
               name='rewards'
               symbol={getRewardTokenName(networkId)}
