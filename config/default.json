@@ -22,6 +22,12 @@
     "rewardTokens": {
         "56": "0x49EFc549313Fd658c532Dda23C2b046Fe3329650"
     },
+    "apyPercentCalculation": {
+        "0x49EFc549313Fd658c532Dda23C2b046Fe3329650": {
+            "duration": 2592000,
+            "decimals": 18
+        }
+    },
     "web3": {
         "ethereumProvider": "https://eth-mainnet.gateway.pokt.network/v1/5f7cca33b90218002e9ce9be",
         "bscProvider": "https://bsc-dataseed.binance.org"

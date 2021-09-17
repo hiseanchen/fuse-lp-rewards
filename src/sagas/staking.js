@@ -8,6 +8,7 @@ import { BasicToken as BasicTokenABI } from '@/constants/abi'
 import { balanceOfToken } from '@/actions/accounts'
 import { ADDRESS_ZERO } from '@/constants'
 import { getContractRewardType, getReward, getRewards } from '../utils'
+import { calculateApy, calculateReserves, weiToNumber } from '@fuseio/earn-sdk/src/utils'
 
 function* getStakingContractsData() {
     const object = {...CONFIG.contracts.bsc }
@@ -136,6 +137,22 @@ function* getStatsData({ stakingContract, tokenAddress, networkId }) {
     const staking = new RewardProgram(stakingContract, web3)
     const rewards = rewardType === 'single' ? [CONFIG.rewardTokens[networkId]] : getRewards(stakingContract)
     const stats = yield staking.getStats(accountAddress, tokenAddress, networkId, rewards)
+
+    const reward0 = rewards[0];
+    let apyPercent = stats.rewardsInfo[0].apyPercent,
+    const reward0Config = CONFIG.apyPercentCalculation[reward0];
+    if (apyPercent == 0 && reward0 && reward0Config) {
+        let rewardPrice = 0;
+        if (reward0 === stats.token0.id) {
+            rewardPrice = stats.reserve0 != 0 ? stats.reserve1 / stats.reserve0 : 0;
+        } else if (reward0 === stats.token1.id) {
+            rewardPrice = stats.reserve1 != 0 ? stats.reserve0 / stats.reserve1 : 0;
+        }
+
+        const totalRewardsInUSD = weiToNumber(stats.rewardsInfo[0].totalRewards, reward0Config.decimals) * rewardPrice
+        apyPercent = calculateApy(totalRewardsInUSD, stats.globalTotalStakeUSD, reward0Config.duration)
+    }
+
     yield put({
         type: actions.GET_STATS_DATA.SUCCESS,
         accountAddress,
@@ -152,7 +169,7 @@ function* getStatsData({ stakingContract, tokenAddress, networkId }) {
             globalTotalStakeUSD: stats.globalTotalStakeUSD,
             lpPrice: stats.pairPrice,
             totalRewardInUSD: stats.rewardsInfo[0].totalRewardsInUSD,
-            apyPercent: stats.rewardsInfo[0].apyPercent * 100,
+            apyPercent: apyPercent * 100,
             token0: stats.token0,
             token1: stats.token1,
             reserve0: stats.reserve0,
