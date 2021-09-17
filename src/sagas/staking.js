@@ -8,7 +8,7 @@ import { BasicToken as BasicTokenABI } from '@/constants/abi'
 import { balanceOfToken } from '@/actions/accounts'
 import { ADDRESS_ZERO } from '@/constants'
 import { getContractRewardType, getReward, getRewards } from '../utils'
-import { calculateApy, calculateReserves, weiToNumber } from '@fuseio/earn-sdk/src/utils'
+const bignumber_js_1 = require("bignumber.js");
 
 function* getStakingContractsData() {
     const object = {...CONFIG.contracts.bsc }
@@ -138,18 +138,26 @@ function* getStatsData({ stakingContract, tokenAddress, networkId }) {
     const rewards = rewardType === 'single' ? [CONFIG.rewardTokens[networkId]] : getRewards(stakingContract)
     const stats = yield staking.getStats(accountAddress, tokenAddress, networkId, rewards)
 
-    const reward0 = rewards[0];
-    let apyPercent = stats.rewardsInfo[0].apyPercent,
-    const reward0Config = CONFIG.apyPercentCalculation[reward0];
-    if (apyPercent == 0 && reward0 && reward0Config) {
-        let rewardPrice = 0;
-        if (reward0 === stats.token0.id) {
-            rewardPrice = stats.reserve0 != 0 ? stats.reserve1 / stats.reserve0 : 0;
-        } else if (reward0 === stats.token1.id) {
-            rewardPrice = stats.reserve1 != 0 ? stats.reserve0 / stats.reserve1 : 0;
-        }
+    function calculateApy(totalRewardsInUSD, globalTotalStakeUSD, duration) {
+        const durationInDays = duration / (3600 * 24);
+        return (totalRewardsInUSD / globalTotalStakeUSD) * (365 / durationInDays);
+    }
 
-        const totalRewardsInUSD = weiToNumber(stats.rewardsInfo[0].totalRewards, reward0Config.decimals) * rewardPrice
+    function weiToNumber(value, decimals = 18) {
+        return new bignumber_js_1.BigNumber(value).div(Math.pow(10, decimals)).toNumber();
+    }
+    const reward0 = rewards[0];
+    let apyPercent = stats.rewardsInfo[0].apyPercent;
+    const reward0Config = CONFIG.apyPercentCalculation[reward0]
+    if (apyPercent == 0 && reward0 && reward0Config) {
+
+        let rewardPrice = 0;
+        if (reward0.toLowerCase() == stats.token0.id.toLowerCase()) {
+            rewardPrice = stats.reserve0 != 0 ? Number(stats.reserve1) / Number(stats.reserve0) : 0;
+        } else if (reward0 == stats.token1.id) {
+            rewardPrice = stats.reserve1 != 0 ? Number(stats.reserve0) / Number(stats.reserve1) : 0;
+        }
+        const totalRewardsInUSD = weiToNumber(Number(stats.rewardsInfo[0].totalRewards), reward0Config.decimals) * rewardPrice
         apyPercent = calculateApy(totalRewardsInUSD, stats.globalTotalStakeUSD, reward0Config.duration)
     }
 
