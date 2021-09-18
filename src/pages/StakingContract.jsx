@@ -75,7 +75,7 @@ export default ({ handleConnect }) => {
             <InfoBox
               name='deposits'
               symbol={symbol}
-              modalText='Your Deposits - Your deposits shows the total amount of FUSE you have deposited into the Staking Contract.'
+              modalText='Your Deposits - Your deposits shows the total amount of HI you have deposited into the Staking Contract.'
               decimals={8}
               title='Your deposits'
               end={formatWeiToNumber(totalStaked)}
@@ -89,7 +89,7 @@ export default ({ handleConnect }) => {
               link={`${getBlockExplorerUrl(networkId)}/address/${CONFIG.rewardTokens[networkId]}`}
               name='rewards'
               symbol={getRewardTokenName(networkId)}
-              modalText={"Accrued Rewards - Accrued Rewards refers to the total FUSE you've earned for your stake"}
+              modalText={"Accrued Rewards - Accrued Rewards refers to the total HI you've earned for your stake"}
               end={formatWeiToNumber(accrued)}
               title='Accrued rewards'
               Icon={() => (

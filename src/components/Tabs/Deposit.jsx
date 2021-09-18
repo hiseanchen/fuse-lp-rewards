@@ -12,7 +12,7 @@ import moment from 'moment'
 import { formatWei, formatWeiToNumber, symbolFromPair } from '@/utils/format'
 import GrayContainer from '@/components/common/GrayContainer.jsx'
 import { depositStake, approveToken } from '@/actions/staking'
-import FuseLoader from '@/assets/images/loader-fuse.gif'
+import FuseLoader from '@/assets/images/loader-hi.gif'
 import walletIcon from '@/assets/images/wallet.svg'
 import PercentageSelector from './PercentageSelector'
 import useSwitchNetwork from '@/hooks/useSwitchNetwork'
@@ -99,7 +99,7 @@ const DepositForm = ({ handleConnect }) => {
         <PercentageSelector balance={balance} />
         <GrayContainer
           decimals={2}
-          tootlipText='Your estimated rewards reflect the amount of $FUSE you are expected to receive by the end of the program assuming there are no changes in deposits.'
+          tootlipText='Your estimated rewards reflect the amount of $HI you are expected to receive by the end of the program assuming there are no changes in deposits.'
           modifier='gray_container--fix-width'
           symbol={getRewardTokenName(stakingNetworkId)}
           title='your estimated rewards'
@@ -115,7 +115,7 @@ const DepositForm = ({ handleConnect }) => {
             >
               Approve&nbsp;&nbsp;
               {
-                isApproving && <img src={FuseLoader} alt='Fuse loader' />
+                isApproving && <img src={FuseLoader} alt='Hi loader' />
               }
             </button>
           )
@@ -130,7 +130,7 @@ const DepositForm = ({ handleConnect }) => {
               className='button'
             >
               Deposit&nbsp;&nbsp;
-              {isDeposit && <img src={FuseLoader} alt='Fuse loader' />}
+              {isDeposit && <img src={FuseLoader} alt='Hi loader' />}
             </button>
           )
         }

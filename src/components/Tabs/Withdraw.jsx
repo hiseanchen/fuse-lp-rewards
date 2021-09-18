@@ -11,7 +11,7 @@ import { Formik, Field, Form } from 'formik'
 import { formatWei, formatWeiToNumber, symbolFromPair } from '@/utils/format'
 import GrayContainer from '@/components/common/GrayContainer.jsx'
 import walletIcon from '@/assets/images/wallet.svg'
-import FuseLoader from '@/assets/images/loader-fuse.gif'
+import FuseLoader from '@/assets/images/loader-hi.gif'
 import PercentageSelector from './PercentageSelector'
 import useIsStakingNetwork from '@/hooks/useIsStakingNetwork'
 import useSwitchNetwork from '@/hooks/useSwitchNetwork'
@@ -97,7 +97,7 @@ const WithdrawForm = ({ handleConnect }) => {
             >
               Withdraw&nbsp;&nbsp;
               {
-                isWithdraw && <img src={FuseLoader} alt='Fuse loader' />
+                isWithdraw && <img src={FuseLoader} alt='Hi loader' />
               }
             </button>
           )
