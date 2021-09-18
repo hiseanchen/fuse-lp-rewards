@@ -52,7 +52,6 @@ const WithdrawForm = ({ handleConnect }) => {
   }
   const renderForm = ({ values, setFieldValue, dirty, isValid }) => {
     const { amount } = values
-    amount && !isNaN(Number(amount)) && (values.amount = amount)
     return (
       <Form className='form form--withdraw'>
         <div className='input__wrapper'>
