@@ -64,8 +64,11 @@ const DepositForm = ({ handleConnect }) => {
   }
 
   const renderForm = ({ values, setFieldValue }) => {
-    const { amount } = values
-    const amountToStake = amount ? web3Utils.toWei(amount).toString() : 0
+    let { amount } = values
+    let  amountToStake = 0 
+     amount && !isNaN(Number(amount)) &&  (amountToStake = web3Utils.toWei(amount).toString())
+    
+   
     const showApprove = new BigNumber(amountApprove).isLessThan(amountToStake)
     const rewardsPerToken = rewardType === 'single' 
       ? calcRewardsPerToken(lockedRewards, globalTotalStake, amountToStake)
@@ -73,7 +76,7 @@ const DepositForm = ({ handleConnect }) => {
         .multipliedBy(rewardRate)
         .dividedBy(new BigNumber(globalTotalStake).plus(amountToStake))
     const estimatedAmount = rewardsPerToken.multipliedBy(new BigNumber(amountToStake).plus(totalStaked))
-    const disableDeposit = showApprove || !amount
+    const disableDeposit = showApprove || amountToStake ==0 || !amountToStake
     return (
       <Form className='form form--deposit'>
         <div className='input__wrapper'>

@@ -39,7 +39,7 @@ const Footer = () => {
           <img className='footer__logo' src={footerLogo} />
         </div>
         <div className='footer__text grid-x align-start'>
-          © 2021 Fuse. The Fuse network is a permissionless and border-less public ledger designed for easy integration of everyday payments.
+          © 2021 Hi. The Hi network is a permissionless and border-less public ledger designed for easy integration of everyday payments.
         </div>
         <div className='footer__icons grid-x align-center'>
           <HoverIcon

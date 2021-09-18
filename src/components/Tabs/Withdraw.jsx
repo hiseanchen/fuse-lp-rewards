@@ -52,13 +52,14 @@ const WithdrawForm = ({ handleConnect }) => {
   }
   const renderForm = ({ values, setFieldValue, dirty, isValid }) => {
     const { amount } = values
+    amount && !isNaN(Number(amount)) && (values.amount = amount)
     return (
       <Form className='form form--withdraw'>
         <div className='input__wrapper'>
           <div className={classNames('balance', { 'balance--disabled': !accountAddress })}>Deposited balance - <span>{formatWei(totalStaked)} {symbol}</span></div>
           <div className='input'>
             <Field name='amount'>
-              {({ field }) => <input {...field} placeholder='0.00' autoComplete='off' />}
+              {({ field }) => <input {...field}   placeholder='0.00' autoComplete='off' />}
             </Field>
             <span className='symbol'>{symbol}</span>
           </div>

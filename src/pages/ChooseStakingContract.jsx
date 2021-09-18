@@ -24,9 +24,9 @@ export default () => {
     <div className='rewards__wrapper'>
       <div className='rewards'>
         <div className='rewards__headline'>
-          <h1>Fuse LP rewards</h1>
-          <p>Please choose your preferred pair, provide liquidity on Uniswap (Ethereum), Fuseswap (Fuse) or PancakeSwap (BSC) and new networks announced soon!
-            Then deposit your LP tokens and start earning Fuse
+          <h1>Hi LP rewards</h1>
+          <p>Please choose your preferred pair, provide liquidity on Uniswap (Ethereum), Hiswap (Hi) or PancakeSwap (BSC) and new networks announced soon!
+            Then deposit your LP tokens and start earning Hi
           </p>
           <a className='rewards__join-tg-link' rel='noreferrer noopener' href='https://t.me/fuseio' target='_blank'>
             <img src={telegram} /> Join our TG group for updates
