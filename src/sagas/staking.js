@@ -110,8 +110,9 @@ function* getStakingData({ stakingContract, networkId }) {
 
         const rewardType = getContractRewardType(stakingContract)
         const RewardProgram = getReward(rewardType)
+        const rewards = rewardType === 'single' ? [CONFIG.rewardTokens[networkId]] : getRewards(stakingContract)
         const staking = new RewardProgram(stakingContract, web3.currentProvider)
-        const stakeData = yield staking.getStakerInfo(accountAddress)
+        const stakeData = yield staking.getStakerInfo(accountAddress, rewards[0])
 
         yield put({
             type: actions.GET_STAKE_DATA.SUCCESS,
